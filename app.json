@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "sdkVersion": "52.0.0",
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "platforms": ["ios", "android"],
+    "android": {
+      "package": "com.eduscan.app",
+      "permissions": ["CAMERA", "RECORD_AUDIO"]
+    },
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need access to your camera to scan QR codes.",
+        "NSMicrophoneUsageDescription": "We need access to your microphone for audio-related features."
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c0120a31-253d-48dc-8dd5-474899ee2fdb"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow the app to access your camera to scan QR codes.",
+          "microphonePermission": "Allow the app to access your microphone for audio-related features."
+        }
+      ],
+      "expo-router",
+      "expo-barcode-scanner"
+    ]
+  }
+}
